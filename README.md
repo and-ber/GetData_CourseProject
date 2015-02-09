@@ -6,11 +6,11 @@ The R script in this repository `run_analysis.R` has been created as part of the
 
 The purpose of the code is basically to load the data "Human Activity Recognition Using Smartphones Dataset, Version 1.0" and perform the following tasks:
 
-1. Merges the training and the test sets to create one data set
+1. Merge the training and the test sets to create one data set
 2. Assign descriptive activity names to name the activities in the data set, as per file "activity_labels.txt"
-3. Extracts only the measurements on the mean and standard deviation for each measurement
-4. Appropriately labels the data set variables with descriptive names as per file "features.txt"
-5. From the data set in step 4, creates a second, independent tidy data set with the average 
+3. Extract only the measurements on the mean and standard deviation for each measurement
+4. Appropriately label the data set variables with descriptive names as per file "features.txt"
+5. From the data set in step 4, create a second, independent tidy data set with the average 
     of each variable for each activity and each subject
 6. Sort the data per subject and per activity and write them in two files, respectively in txt and csv
 
@@ -22,7 +22,7 @@ Prior to run the R code, it is suggested to clone this repository, in order to k
 
 The output are two files of different format, but with the same content:
 * TidyData.csv
-* TidyData.txt
+* TidyData.txt  
 which will be automatically saved in the working directory.
 For reference, these files are also included in this repository.
 
