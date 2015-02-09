@@ -22,7 +22,8 @@ Prior to run the R code, it is suggested to clone this repository, in order to k
 
 The output are two files of different format, but with the same content:
 * TidyData.csv
-* TidyData.txt  
+* TidyData.txt
+  
 which will be automatically saved in the working directory.
 For reference, these files are also included in this repository.
 
