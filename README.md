@@ -20,7 +20,7 @@ To understand the data the `CodeBook.md` included in this repository provides th
 
 Prior to run the R code, it is suggested to clone this repository, in order to keep the input data structure under the folder `UCI HAR Dataset`. Such folder should be placed in the working directory of the R environment used.
 
-The R script utilizes the package `dplyr` with a call to it `library(dplyr)`. If not already installed, it should be installed prior to executing the package with the following command `install.packages("dplyr")`.
+The R script utilizes the package `dplyr` with a call to it `library(dplyr)`. If not already installed, it should be installed prior to executing the code with the following command `install.packages("dplyr")`.
 
 The output are two files of different format, but with the same content:
 * TidyData.csv
