@@ -26,7 +26,7 @@ For each record it is provided:
 - Its activity label (1 to 6: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
 - An identifier of the subject who carried out the experiment
 
-The dataset includes the following files:  
+The dataset in folder `UCI HAR Dataset` includes the following files:  
 - features.txt: List of all features
 - activity_labels.txt: Links the class labels with their activity name
 - train/X_train.txt: Training set
