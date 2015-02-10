@@ -176,7 +176,7 @@ With an operation of extraction only the measurements on the mean and standard d
 68	fBodyBodyGyroJerkMag-mean()	  
 69	fBodyBodyGyroJerkMag-std()	  
 
-Operations of summarizing and sorting were performed using the R package `dplyr`, previously installed.
+Operations of summarizing and sorting were performed using the R package *dplyr*, previously installed.
 
 ##Output Data
 
