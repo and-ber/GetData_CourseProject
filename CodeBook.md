@@ -5,7 +5,8 @@ Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advan
 [Human Activity Recognition Using Smartphones] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 Here are the data for the project:
 [Dataset] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, were captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, were captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.  
+
 The R code ` run_analysis.R` performs the following tasks:
 1. Merge the training and the test sets to create one data set
 2. Assign descriptive activity names to name the activities in the data set, as per file "activity_labels.txt"
@@ -89,15 +90,17 @@ The complete list of variables of each feature vector is available in `features.
 
 ##Transformation of the Data
 
-Respectively the training and test datasets are loaded and transformed as follows:
+Respectively the training and test datasets `X_train.txt` and `X_test.txt` are loaded and transformed as follows:
+- to each observation, corresponding to the rows of the dataset, the corresponding id of the subject performing the activity is assigned as per files `subject_train.txt` and `subject_test.txt`
+- - to each observation, corresponding to the rows of the dataset, the corresponding id of the activity performing is assigned as per file `y_train.txt` and `y_test.txt`
 - to each activity, identified with an id. number, is assigned a descriptive name as per file `activity_labels.txt`
 - to each variable, correspondig to the columns of the dataset, is assigned a descriptive name as per file `features.txt`
-- to each observation, corresponding to the rows of the dataset, the corresponding id of the subject performing the activity is assigned
+
 Then the training and test datasets are merged together.
 
 ##Cleaning of the Data
 
-With an operation of extraction only the measurements on the mean and standard deviation for each measurement are kept, resulting in the following data for each window sample:
+With an operation of extraction only the measurements on the mean and standard deviation for each measurement are kept  and consequently are averaged and sorted per activity and per subject, resulting in the following data for each window sample:
 
 1	SubjectId	  
 2	ActivityId	  
@@ -168,3 +171,9 @@ With an operation of extraction only the measurements on the mean and standard d
 67	fBodyBodyGyroMag-std()	  
 68	fBodyBodyGyroJerkMag-mean()	  
 69	fBodyBodyGyroJerkMag-std()	  
+
+Operations of summarizing and sorting were performed using the R package `dplyr`, previously installed.
+
+##Output Data
+
+The data frame is exported in two equivalent files in the working directory, as a text file `TidyData.txt` and a CSV file `TidyData.csv`.
